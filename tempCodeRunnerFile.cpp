@@ -1,2 +1,5 @@
-cout<<"You got "<<letter_grade<<endl;
-cout<<"congrats! You're promoted to next class";
+
+  // cout<<"enter your full name";
+  // cin.getline(full_name,50);
+  // cout<<"your full name is"<<full_name<<endl;
+  // cout<<"----------------------------"<<endl;
