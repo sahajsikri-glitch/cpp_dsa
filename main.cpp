@@ -863,3 +863,13 @@ using namespace std;
 // // return 0;
 // // strcmp(str,str2); ERROR funct for c style string not for c++ string !
 // }
+
+//SECTION - 12 : POINTERS 
+int main(){
+  // 1)declaring pointers
+  int * int_ptr;
+  double*int_double;
+
+  // 2)initializing pointers
+  double*double_ptr{nullptr};
+}
