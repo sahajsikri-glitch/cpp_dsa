@@ -894,10 +894,22 @@ using namespace std;
 
 //Dereferencing a pointer
 //ill - 01
+// int main(){
+//   string name{"frank"};
+//   string *string_ptr{&name};
+//   cout<<string_ptr<<endl;
+//   name = "james";
+//   cout<<string_ptr<<endl;
+// }
+
+// Dynamic memory allocation 
+// ill-01:
 int main(){
-  string name{"frank"};
-  string *string_ptr{&name};
-  cout<<string_ptr<<endl;
-  name = "james";
-  cout<<string_ptr<<endl;
+  size_t size{0};
+  double *temp_ptr{nullptr};
+  cout<<"how many temps ? ";
+  temp_ptr = new double[size];
+  cout<<temp_ptr<<endl;
+  delete[]temp_ptr;//always use delete at alst to freeze 
+  //allocated memory to prevent from MEMORY LEAK
 }
