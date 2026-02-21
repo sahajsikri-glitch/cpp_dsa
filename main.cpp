@@ -915,45 +915,61 @@ using namespace std;
 // }
 
 //Relationship bwtween arrays and pointers 
+// int main(){
+//   // ill - 01:
+//   // int scores[]{100,95,90};
+//   // int *score_ptr{scores};//this is a pointer pointing towards scores !
+
+//   // //score_ptr can be interchangibly used with score 
+//   // cout<<score_ptr[0]<<endl;
+//   // cout<<score_ptr[1]<<endl;
+//   // cout<<score_ptr[2]<<endl;
+
+//   // ill-02:
+//   int scores[]{100,95,90};
+//   cout<<"value of scores :"<<scores<<endl;
+//   int *scores_ptr{scores};
+//   cout<<"value of score_ptr :"<<scores_ptr<<endl;
+// //both of em willl display the same value 
+
+// //array subscript notation :(general notation [like how we
+// //  do it geerally])
+// cout<<scores[0]<<endl;
+// cout<<scores[1]<<endl;
+// cout<<scores[2]<<endl;
+
+// //pointer subscript notation :
+// cout<<scores_ptr[0]<<endl;
+// cout<<scores_ptr[1]<<endl;
+// cout<<scores_ptr[2]<<endl;
+
+// //array offset notation :
+// cout<<*scores<<endl; // 1000 allocated location
+// cout<<*(scores+1)<<endl;//(+1 = indicates 
+// // [1000 + 1(pointing to int scores wala int) 
+// // = manje 4 == 1004 allocated location])
+// cout<<*(scores+2)<<endl; //similiarly = 1008
+
+// //pointer offset notation : (same here just the difference is 
+// // of int wali value int score ki jagah int sore_ptr se lega )
+// cout<<*scores_ptr<<endl;
+// cout<<*(scores_ptr+1)<<endl;
+// cout<<*(scores_ptr+2)<<endl;
+// }
+
+//pointers arithmetic
 int main(){
-  // ill - 01:
-  // int scores[]{100,95,90};
-  // int *score_ptr{scores};//this is a pointer pointing towards scores !
+  int scores[]{100,95,89,65,-1};
+  int *score_ptr = scores;
+  //dereferencing and incrementation in diff line of code :
+  while(*score_ptr!=-1){
+    cout<<*score_ptr<<endl;
+    *score_ptr++;
+  }
+  cout<<"\n";
 
-  // //score_ptr can be interchangibly used with score 
-  // cout<<score_ptr[0]<<endl;
-  // cout<<score_ptr[1]<<endl;
-  // cout<<score_ptr[2]<<endl;
-
-  // ill-02:
-  int scores[]{100,95,90};
-  cout<<"value of scores :"<<scores<<endl;
-  int *scores_ptr{scores};
-  cout<<"value of score_ptr :"<<scores_ptr<<endl;
-//both of em willl display the same value 
-
-//array subscript notation :(general notation [like how we
-//  do it geerally])
-cout<<scores[0]<<endl;
-cout<<scores[1]<<endl;
-cout<<scores[2]<<endl;
-
-//pointer subscript notation :
-cout<<scores_ptr[0]<<endl;
-cout<<scores_ptr[1]<<endl;
-cout<<scores_ptr[2]<<endl;
-
-//array offset notation :
-cout<<*scores<<endl; // 1000 allocated location
-cout<<*(scores+1)<<endl;//(+1 = indicates 
-// [1000 + 1(pointing to int scores wala int) 
-// = manje 4 == 1004 allocated location])
-cout<<*(scores+2)<<endl; //similiarly = 1008
-
-//pointer offset notation : (same here just the difference is 
-// of int wali value int score ki jagah int sore_ptr se lega )
-cout<<*scores_ptr<<endl;
-cout<<*(scores_ptr+1)<<endl;
-cout<<*(scores_ptr+2)<<endl;
+  //dereferencing and incrementation in same line of code :
+  while(*score_ptr!=-1){
+    cout<<*score_ptr++<<endl;
+  }
 }
-
