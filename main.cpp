@@ -865,11 +865,29 @@ using namespace std;
 // }
 
 //SECTION - 12 : POINTERS 
-int main(){
-  // 1)declaring pointers
-  int * int_ptr;
-  double*int_double;
 
-  // 2)initializing pointers
-  double*double_ptr{nullptr};
+// int main(){
+//   // 1)declaring pointers
+//   int * int_ptr;
+//   double*int_double;
+
+//   // 2)initializing pointers
+//   double*double_ptr{nullptr};
+// }
+
+//accessing the pointer address nd storing address in a pointer 
+int main(){
+  int num{10};
+  cout<<"value of num is : " <<num <<endl; // value
+  cout<<"size of num is : "<<sizeof num<<endl;// shows bytes of int
+  cout<<"address of num is : "<<&num<<endl;//garbage_address of num
+
+  int *p;
+  cout<<"value of p is : " <<p <<endl; // garbage
+  cout<<"size of p is : "<<sizeof p<<endl;// shows bytes of int
+  cout<<"address of p is : "<<&p<<endl;//garbage_address of p
+
+  p = nullptr;
+  //nullptr = pointing nowhere!
+  cout<<"num of p : "<<p<<endl;
 }
