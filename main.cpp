@@ -958,18 +958,36 @@ using namespace std;
 // }
 
 //pointers arithmetic
-int main(){
-  int scores[]{100,95,89,65,-1};
-  int *score_ptr = scores;
-  //dereferencing and incrementation in diff line of code :
-  while(*score_ptr!=-1){
-    cout<<*score_ptr<<endl;
-    *score_ptr++;
-  }
-  cout<<"\n";
+// int main(){
+//   int scores[]{100,95,89,65,-1};
+//   int *score_ptr = scores;
+//   //dereferencing and incrementation in diff line of code :
+//   while(*score_ptr!=-1){
+//     cout<<*score_ptr<<endl;
+//     *score_ptr++;
+//   }
+//   cout<<"\n";
 
-  //dereferencing and incrementation in same line of code :
-  while(*score_ptr!=-1){
-    cout<<*score_ptr++<<endl;
+//   //dereferencing and incrementation in same line of code :
+//   while(*score_ptr!=-1){
+//     cout<<*score_ptr++<<endl;
+//   }
+// }
+
+//passing pointers to function :
+  void swap(int *a , int *b){
+    int temp = *a;
+    *a=*b;
+    *b=temp;
   }
-}
+
+  int main(){
+    int x{100},y{300};
+    cout<<"x :"<<x<<endl;
+    cout<<"y :"<<y<<endl;
+
+    swap(&x,&y);
+
+    cout<<"x :"<<x<<endl;
+    cout<<"y :"<<y<<endl;
+  }
