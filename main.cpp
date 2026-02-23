@@ -975,19 +975,43 @@ using namespace std;
 // }
 
 //passing pointers to function :
-  void swap(int *a , int *b){
-    int temp = *a;
-    *a=*b;
-    *b=temp;
-  }
+// ill - 01 :
+  // void swap(int *a , int *b){
+  //   int temp = *a;
+  //   *a=*b;
+  //   *b=temp;
+  // }
 
+  // int main(){
+  //   int x{100},y{300};
+  //   cout<<"x :"<<x<<endl;
+  //   cout<<"y :"<<y<<endl;
+
+  //   swap(&x,&y);
+
+  //   cout<<"x :"<<x<<endl;
+  //   cout<<"y :"<<y<<endl;
+  // }
+
+  // ill - 02 :
+  // void display(vector <int> *vec){
+  //   for(auto str : *vec){
+  //     cout<<str<<" ";
+  //   }
+  // }
+  
+  // int main(){
+  //   vector <int> vec{100,28,373773};
+  //   display(&vec);
+  // }
+
+  //ill - 03 : 
+  void display(int *arr,int sentinel){
+    while(*arr!=sentinel){
+      cout<<* arr++<<" ";
+    }
+  } 
   int main(){
-    int x{100},y{300};
-    cout<<"x :"<<x<<endl;
-    cout<<"y :"<<y<<endl;
-
-    swap(&x,&y);
-
-    cout<<"x :"<<x<<endl;
-    cout<<"y :"<<y<<endl;
+    int scores[]{100,282,373,929,-1};
+    display(scores,929);
   }
